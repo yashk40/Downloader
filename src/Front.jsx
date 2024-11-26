@@ -48,7 +48,7 @@ const TeraboxDownloader = () => {
     <>
       <Helmet>
         <title>Terabox Downloader</title>
-        <meta name="description" content="Download files from Terabox easily with our downloader tool." />
+        <meta name="description" content="Download files from Terabox easily with our downloader tool.just paste and download it" />
         <meta name="keywords" content="Terabox,downloader,file download,cloud storage,terabox downloader online,terabox direct download,terabox direct download link generator,terabox link video downloader online free,terabox downloader video,download from terabox without app,	
 terabox downloader bot,terabox downloader,terabox downloader online free,terabox link downloader" />
         <meta name="author" content="TeraDownloader.com" />
