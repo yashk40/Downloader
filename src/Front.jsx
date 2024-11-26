@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
-
+import { Helmet } from 'react-helmet';
 const TeraboxDownloader = () => {
   const [inputUrl, setInputUrl] = useState('');
   const [result, setResult] = useState(null);
@@ -47,6 +46,19 @@ const TeraboxDownloader = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Terabox Downloader</title>
+        <meta name="description" content="Download files from Terabox easily with our downloader tool." />
+        <meta name="keywords" content="Terabox,downloader,file download,cloud storage,terabox downloader online,terabox direct download,terabox direct download link generator,terabox link video downloader online free,terabox downloader video,download from terabox without app,	
+terabox downloader bot,terabox downloader,terabox downloader online free,terabox link downloader" />
+        <meta name="author" content="TeraDownloader.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Terabox Downloader" />
+        <meta property="og:description" content="Easily download files from Terabox with our tool. Direct downnload using this website" />
+        <meta property="og:image" content="URL_TO_IMAGE" /> 
+        <meta property="og:url" content="https://teraboxdownloader.fun/" /> 
+      </Helmet>
     <div id='background-color' style={{  background: 'linear-gradient(45deg, #66b3ff, #66e0ff)',}} >
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }} >
       <h1>Terabox Downloader</h1>
