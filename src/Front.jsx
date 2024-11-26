@@ -71,7 +71,7 @@ terabox downloader bot,terabox downloader,terabox downloader online free,terabox
           style={{
             width: '100%',
             padding: '10px',
-            borderRadius: '4px',
+            borderRadius: '8px',
             border: '1px solid #ccc',
             marginBottom: '10px',
           }}
@@ -87,7 +87,7 @@ terabox downloader bot,terabox downloader,terabox downloader online free,terabox
             cursor: 'pointer',
           }}
         >
-          {loading ? 'Loading...' : 'Fetch Download Link'}
+          {loading ? 'Loading...' : 'Get Download Link'}
         </button>
       </div>
       
@@ -142,26 +142,27 @@ terabox downloader bot,terabox downloader,terabox downloader online free,terabox
       )}
     {!result && !loading && (
         <div style={{ background: 'linear-gradient(45deg, #66b3ff, #66e0ff)', marginTop: '20px', color: 'black',paddingTop:'30px',paddingBottom:"30px",alignItems:"center",display:"flex",justifyContent:"center" }}>
-            <p>Please enter the link above to fetch the download link.</p>
+            <p>Please enter the link above </p>
         </div>
     )}
-          <div style={{ marginTop: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px',boxShadow:"1px 2px 4px " }}>
+          <div style={{ marginTop: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
         <h2>How to download videos, files from Terabox URL using Terabox link converter:</h2>
         <ol>
           <li>Copy Terabox Link: Copy your desired Terabox link from anywhere, like Telegram, Twitter, WhatsApp, or any groups.</li>
           <li>Paste URL: Paste the copied Terabox link in the input box of our app and click on the "Download" button.</li>
         </ol>
       </div>
-      <div style={{ marginTop: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px',boxShadow:"1px 2px 4px" }}>
+      <div style={{ marginTop: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px'}}>
         <h2>About Terabox</h2>
         <p>TeraBox is a free cloud storage tool that offers 1TB of secure storage for documents, file sharing, and videos. You can easily transfer files across devices and share them with friends.</p>
         <p>It ensures data safety with regular backups, either automatic or manual. You can manage your files effortlessly with features like folders for organization, version control for tracking changes, and easy file sharing.</p>
       </div>
 
 
-      <footer style={{ marginTop: '20px', padding: '10px', textAlign: 'center', backgroundColor: '#f8f9fa', borderTop: '1px solid #ccc' }}>
-        <p>&copy; {new Date().getFullYear()} TeraDownloader.com. All rights reserved.</p>
-        <p>Follow us on <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> | <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+      <footer style={{ marginTop: '20px', padding: '10px', textAlign: 'center', backgroundColor: '#171717',color
+        :"white" ,borderTop: '1px solid #ccc' }}>
+        <p>&copy; {new Date().getFullYear()} teraboxdownloader.fun. All rights reserved.</p>
+        <p  ><a href="/" target="_blank" rel="noopener noreferrer">About us</a> | <a href="/" target="_blank" rel="noopener noreferrer">Terms&condition</a></p>
       </footer>
     </>
   );
