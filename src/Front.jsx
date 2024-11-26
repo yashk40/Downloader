@@ -40,14 +40,14 @@ const TeraboxDownloader = () => {
     } catch (err) {
       setError(err.message);
       setResult(null);
-    } finally {
+    } finally {F
       setLoading(false);
     }
   };
 
   return (
     <>
-    <div id='background-color' >
+    <div id='background-color' style={{  background: 'linear-gradient(45deg, #66b3ff, #66e0ff)',}} >
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }} >
       <h1>Terabox Downloader</h1>
       <div style={{ marginBottom: '10px' }}>
@@ -85,7 +85,7 @@ const TeraboxDownloader = () => {
     {result && (
         <div style={{ marginTop: '20px' }}>
           <div style={{
-            backgroundColor:"#ecd4f4",
+           background: 'linear-gradient(45deg, #66b3ff, #66e0ff)',
             padding: '20px',
             borderRadius: '8px',
             display:"flex",
@@ -129,7 +129,7 @@ const TeraboxDownloader = () => {
         </div>
       )}
     {!result && !loading && (
-        <div style={{ marginTop: '20px', color: 'black',backgroundColor:"#ecd4f4",paddingTop:'30px',paddingBottom:"30px",alignItems:"center",display:"flex",justifyContent:"center" }}>
+        <div style={{ background: 'linear-gradient(45deg, #66b3ff, #66e0ff)', marginTop: '20px', color: 'black',paddingTop:'30px',paddingBottom:"30px",alignItems:"center",display:"flex",justifyContent:"center" }}>
             <p>Please enter the link above to fetch the download link.</p>
         </div>
     )}
