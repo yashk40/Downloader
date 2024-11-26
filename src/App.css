@@ -1,0 +1,75 @@
+body{
+  overflow-x: hidden;
+}
+
+
+
+#Navbar{
+  width: 100vw;
+  background-color: white;
+  box-shadow: 2px 1px 20px black;
+  font-family: Poppins;
+  display: flex;
+  align-items: center;
+
+}
+
+
+#Navbar-2{
+  z-index: 20;
+}
+
+#img-icon{
+  min-width:50px;
+  max-width: 70px;
+}
+
+#img-icon-box{
+  display: flex;
+  align-items: center;
+  font-weight:600;
+  margin-left:20px;
+}
+
+#left-nav{
+
+padding-left: 40px;
+ font-weight: 500;
+}
+
+#nav-side{
+ padding-top: 13px;
+  font-weight: 500;
+  padding-right:40px;
+  font-size:17px;
+}
+
+#Navbar-2{
+  width: 100vw;
+}
+
+
+
+.nav-small{
+  display:flex;
+}
+
+@media(max-width:950px){
+
+  .nav-small{
+    display:block;
+  }
+
+}
+
+
+#background-color{
+    background-color:	#b9e2f5 ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* https://teradownloader.com/download?w=0&link=https%3A%2F%2Fteraboxapp.com%2Fs%2F1y-f7BG-4TUtudxXKSN-B3A
+https://d.terabox.app/file/780ac3e35504defb4ca3384575dece8d?fid=4399920817143-250528-544189476763129&dstime=1732385480&rt=sh&sign=FDtAER-DCb740ccc5511e5e8fedcff06b081203-g3VUwW2mvI5QZcChEp%2Bs5u%2FYim8%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=8762283025788345755&dp-callid=0&r=908968872&sh=1&region=jp
+https://teraboxapp.com/s/1T9msfpU49wCbF7CkX1Ocuw */
