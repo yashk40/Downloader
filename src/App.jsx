@@ -15,7 +15,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<TeraboxDownloader />} />
-          <Route path='/About' element={<About/>}/>
+          <Route path="/About" element={<About/>}/>
           <Route path="/youtube-Down" element={<YTdown/>}/>
         </Routes>
       </>
