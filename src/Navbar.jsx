@@ -20,7 +20,7 @@ export default function Navbar() {
       <form className="nav-small" role="search">
       {/* <a id='nav-side' href='/youtube-Down'  >Youtube video downloader</a> */}
       <a id='nav-side' href='/'>Home</a>
-        <a id='nav-side' href='/About'  >About</a>
+        <a id='nav-side' href="/About"  >About</a>
         <p id='nav-side'>Terms&condition</p>
        
       </form>
