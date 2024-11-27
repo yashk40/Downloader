@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -19,8 +20,8 @@ export default function Navbar() {
       </ul>
       <form className="nav-small" role="search">
       {/* <a id='nav-side' href='/youtube-Down'  >Youtube video downloader</a> */}
-      <a id='nav-side' href='/'>Home</a>
-        <a id='nav-side' href="/About"  >About</a>
+      <Link id='nav-side' to='/'>Home</Link>
+      <Link id='nav-side' to="/About"  >About</Link>
         <p id='nav-side'>Terms&condition</p>
        
       </form>
