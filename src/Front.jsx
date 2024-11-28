@@ -39,22 +39,37 @@ const TeraboxDownloader = () => {
     } catch (err) {
       setError(err.message);
       setResult(null);
-    } finally {
+    } finally {F
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "//shocking-honey.com/a/W/ZCy.QY2/9/k/ZmTE9A6sbB2f5TllSSWlQf9BNLTIgJwmOQDRk/yvNHiXZuwudUX_Nro/WUmy9luWZhUxlhkKPITiUx4EMMDHgf5_Mkj-YR";
-    script.async = true;
-    script.referrerPolicy = 'no-referrer-when-downgrade';
-    document.body.appendChild(script);
+    // Load the first script
+    const script1 = document.createElement('script');
+    script1.src = "//shocking-honey.com/a/W/ZCy.QY2/9/k/ZmTE9A6sbB2f5TllSSWlQf9BNLTIgJwmOQDRk/yvNHiXZuwudUX_Nro/WUmy9luWZhUxlhkKPITiUx4EMMDHgf5_Mkj-YR";
+    script1.async = true;
+    script1.referrerPolicy = 'no-referrer-when-downgrade';
+    document.body.appendChild(script1);
+
+    // Load the second script
+    const script2 = document.createElement('script');
+    (function(idkzb) {
+      var d = document,
+          s = d.createElement('script'),
+          l = d.scripts[d.scripts.length - 1];
+      s.settings = idkzb || {};
+      s.src = "//glum-mortgage.com/brX.VFsYdZG-l-0yYLW/dQiCY/WB5fuEZMXqIi/uegmv9GufZ/UllAkIPNTZUl4PM/DRklxzMHj/M/twNyT/gpwbOsTZE/yYN/AC";
+      s.async = true;
+      s.referrerPolicy = 'no-referrer-when-downgrade';
+      l.parentNode.insertBefore(s, l);
+    })({});
 
     return () => {
-      document.body.removeChild(script);
+      document.body.removeChild(script1); // Cleanup first script
+      // Note: The second script is added inline, so it doesn't need explicit removal
     };
-  }, []);
+  }, []); // Empty dependency array to run once on mount
 
   return (
     <>
