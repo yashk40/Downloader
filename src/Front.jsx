@@ -150,7 +150,7 @@ terabox downloader bot,terabox downloader,terabox downloader online free,terabox
 </a>
                        
                        
-                            <a
+                           <a
                       className="btn btn-warning"
                       style={{paddingLeft:"20px",marginBottom:"20px"}}
   href={`${(value.dlink)}`}
