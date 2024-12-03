@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import axios from 'axios';
+
 const TeraboxDownloader = () => {
   const [inputUrl, setInputUrl] = useState('');
   const [result, setResult] = useState(null);
@@ -21,25 +23,48 @@ const TeraboxDownloader = () => {
         'x-rapidapi-host': 'terabox-downloader-direct-download-link-generator.p.rapidapi.com',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
+      data: {
         url: inputUrl,
-      }),
+      },
     };
 
     try {
+      // First attempt using fetch
       const response = await fetch(url, options);
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
       }
       const data = await response.json();
-      console.log('Full Response:', response);
-      console.log('Fetched Data:', data);
       setResult(data);
       setError(null);
     } catch (err) {
-      setError(err.message);
-      setResult(null);
-    } finally {F
+      console.error('Fetch failed, trying Axios:', err);
+
+      // Fallback to Axios if fetch fails
+      const axiosOptions = {
+        method: 'POST',
+        url: url,
+        headers: {
+          'x-rapidapi-key': 'f9b4821a05msh548781913574675p17c7c5jsn25222039beda',
+          'x-rapidapi-host': 'terabox-downloader-direct-download-link-generator.p.rapidapi.com',
+          'Content-Type': 'application/json',
+        },
+        data: {
+          url: inputUrl,
+        },
+      };
+
+      try {
+        const response = await axios.request(axiosOptions);
+        console.log('Axios response:', response.data);
+        setResult(response.data);
+        setError(null);
+      } catch (axiosError) {
+        console.error('Axios request failed:', axiosError);
+        setError(axiosError.message);
+        setResult(null);
+      }
+    } finally {
       setLoading(false);
     }
   };
